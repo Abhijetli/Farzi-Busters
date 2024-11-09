@@ -5,7 +5,15 @@ from flask_cors import CORS
 import traceback
 
 app = Flask(__name__)
-CORS(app)
+
+# Allow CORS for all routes
+CORS(app, resources={r"/*": {"origins": "https://farzibustersai.netlify.app"}})
+
+@app.route('/check-currency', methods=['POST'])
+def check_currency():
+    # your logic here
+    return jsonify(result="Success")
+
 
 @app.route('/check-currency', methods=['POST'])
 def check_currency():
