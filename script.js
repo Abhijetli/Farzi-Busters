@@ -26,7 +26,7 @@ document.getElementById("uploadForm").addEventListener("submit", function(event)
     document.getElementById("responseMessage").innerHTML = '';
 
     // Make the POST request to Flask backend
-    fetch("https://farzi-busters.onrender.com", {
+    fetch("https://farzi-busters-1.onrender.com", {
         method: "POST",
         body: formData
     })
