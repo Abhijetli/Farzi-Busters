@@ -26,7 +26,7 @@ document.getElementById("uploadForm").addEventListener("submit", function(event)
     document.getElementById("responseMessage").innerHTML = '';
 
     // Make the POST request to Flask backend
-    fetch("http://127.0.0.1:5000/check-currency", {
+    fetch("https://farzi-busters.onrender.com", {
         method: "POST",
         body: formData
     })
