@@ -26,10 +26,11 @@ document.getElementById("uploadForm").addEventListener("submit", function(event)
     document.getElementById("responseMessage").innerHTML = '';
 
     // Make the POST request to Flask backend
-    fetch("https://farzi-busters-1.onrender.com", {
-        method: "POST",
-        body: formData
+    fetch("https://farzi-busters-1.onrender.com/check-currency", {
+    method: "POST",
+    body: formData
     })
+
     .then(response => response.json())
     .then(data => {
         // Hide loading message
